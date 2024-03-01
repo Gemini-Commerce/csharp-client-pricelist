@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 api/openapi.yaml
 appveyor.yml
@@ -100,6 +99,9 @@ src/pricelist/Api/PriceListApi.cs
 src/pricelist/Client/ApiClient.cs
 src/pricelist/Client/ApiException.cs
 src/pricelist/Client/ApiResponse.cs
+src/pricelist/Client/Auth/OAuthAuthenticator.cs
+src/pricelist/Client/Auth/OAuthFlow.cs
+src/pricelist/Client/Auth/TokenResponse.cs
 src/pricelist/Client/ClientUtils.cs
 src/pricelist/Client/Configuration.cs
 src/pricelist/Client/ExceptionFactory.cs

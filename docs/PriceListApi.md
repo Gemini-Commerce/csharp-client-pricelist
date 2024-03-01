@@ -1,27 +1,29 @@
 # pricelist.Api.PriceListApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://pricelist.api.gogemini.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**PriceListCreatePriceList**](PriceListApi.md#pricelistcreatepricelist) | **POST** /pricelist.PriceList/CreatePriceList |  |
-| [**PriceListDeletePriceListItems**](PriceListApi.md#pricelistdeletepricelistitems) | **POST** /pricelist.PriceList/DeletePriceListItems |  |
-| [**PriceListGetFullPriceItemsByPricelistId**](PriceListApi.md#pricelistgetfullpriceitemsbypricelistid) | **POST** /pricelist.PriceList/GetFullPriceItemsByPricelistId |  |
+| [**CreatePriceList**](PriceListApi.md#createpricelist) | **POST** /pricelist.PriceList/CreatePriceList | Create new list |
+| [**DeletePriceListItems**](PriceListApi.md#deletepricelistitems) | **POST** /pricelist.PriceList/DeletePriceListItems | Get prices for items |
+| [**GetFullPriceItemsByPricelistId**](PriceListApi.md#getfullpriceitemsbypricelistid) | **POST** /pricelist.PriceList/GetFullPriceItemsByPricelistId | List detailed items |
+| [**GetPriceList**](PriceListApi.md#getpricelist) | **POST** /pricelist.PriceList/GetPriceList | Get specific list |
+| [**GetPriceListByCode**](PriceListApi.md#getpricelistbycode) | **POST** /pricelist.PriceList/GetPriceListByCode | Get list by code |
+| [**GetPriceListItems**](PriceListApi.md#getpricelistitems) | **POST** /pricelist.PriceList/GetPriceListItems | Get items in list |
+| [**GetPricesItems**](PriceListApi.md#getpricesitems) | **POST** /pricelist.PriceList/GetPricesItems | Get detailed items |
+| [**ListFullPriceItemsByPricelistId**](PriceListApi.md#listfullpriceitemsbypricelistid) | **POST** /pricelist.PriceList/ListFullPriceItemsByPricelistId | List detailed price items for a specific price list |
+| [**ListPriceLists**](PriceListApi.md#listpricelists) | **POST** /pricelist.PriceList/ListPriceLists | List all price lists |
 | [**PriceListGetPriceItemsByPriceListItemIds**](PriceListApi.md#pricelistgetpriceitemsbypricelistitemids) | **POST** /pricelist.PriceList/GetPriceItemsByPriceListItemIds |  |
-| [**PriceListGetPriceList**](PriceListApi.md#pricelistgetpricelist) | **POST** /pricelist.PriceList/GetPriceList |  |
-| [**PriceListGetPriceListByCode**](PriceListApi.md#pricelistgetpricelistbycode) | **POST** /pricelist.PriceList/GetPriceListByCode |  |
-| [**PriceListGetPriceListItems**](PriceListApi.md#pricelistgetpricelistitems) | **POST** /pricelist.PriceList/GetPriceListItems |  |
-| [**PriceListGetPricesItems**](PriceListApi.md#pricelistgetpricesitems) | **POST** /pricelist.PriceList/GetPricesItems |  |
-| [**PriceListListFullPriceItemsByPricelistId**](PriceListApi.md#pricelistlistfullpriceitemsbypricelistid) | **POST** /pricelist.PriceList/ListFullPriceItemsByPricelistId |  |
-| [**PriceListListPriceLists**](PriceListApi.md#pricelistlistpricelists) | **POST** /pricelist.PriceList/ListPriceLists |  |
-| [**PriceListSetPriceListItems**](PriceListApi.md#pricelistsetpricelistitems) | **POST** /pricelist.PriceList/SetPriceListItems |  |
-| [**PriceListUpdatePriceList**](PriceListApi.md#pricelistupdatepricelist) | **POST** /pricelist.PriceList/UpdatePriceList |  |
+| [**SetPriceListItems**](PriceListApi.md#setpricelistitems) | **POST** /pricelist.PriceList/SetPriceListItems | Set items in list |
+| [**UpdatePriceList**](PriceListApi.md#updatepricelist) | **POST** /pricelist.PriceList/UpdatePriceList | Update list |
 
-<a id="pricelistcreatepricelist"></a>
-# **PriceListCreatePriceList**
-> PricelistCreatePriceListResponse PriceListCreatePriceList (PricelistCreatePriceListRequest body)
+<a id="createpricelist"></a>
+# **CreatePriceList**
+> PricelistCreatePriceListResponse CreatePriceList (PricelistCreatePriceListRequest body)
 
+Create new list
 
+Allows the creation of a new price list with specified details such as code, name, currency, and type.
 
 ### Example
 ```csharp
@@ -33,23 +35,29 @@ using pricelist.Model;
 
 namespace Example
 {
-    public class PriceListCreatePriceListExample
+    public class CreatePriceListExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
             var apiInstance = new PriceListApi(config);
             var body = new PricelistCreatePriceListRequest(); // PricelistCreatePriceListRequest | 
 
             try
             {
-                PricelistCreatePriceListResponse result = apiInstance.PriceListCreatePriceList(body);
+                // Create new list
+                PricelistCreatePriceListResponse result = apiInstance.CreatePriceList(body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PriceListApi.PriceListCreatePriceList: " + e.Message);
+                Debug.Print("Exception when calling PriceListApi.CreatePriceList: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -58,20 +66,21 @@ namespace Example
 }
 ```
 
-#### Using the PriceListCreatePriceListWithHttpInfo variant
+#### Using the CreatePriceListWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    ApiResponse<PricelistCreatePriceListResponse> response = apiInstance.PriceListCreatePriceListWithHttpInfo(body);
+    // Create new list
+    ApiResponse<PricelistCreatePriceListResponse> response = apiInstance.CreatePriceListWithHttpInfo(body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling PriceListApi.PriceListCreatePriceListWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling PriceListApi.CreatePriceListWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -89,7 +98,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -100,16 +109,20 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
 | **0** | An unexpected error response. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="pricelistdeletepricelistitems"></a>
-# **PriceListDeletePriceListItems**
-> Object PriceListDeletePriceListItems (PricelistDeletePriceListItemsRequest body)
+<a id="deletepricelistitems"></a>
+# **DeletePriceListItems**
+> Object DeletePriceListItems (PricelistDeletePriceListItemsRequest body)
 
+Get prices for items
 
+Deletes specified items from a price list based on their unique identifiers.
 
 ### Example
 ```csharp
@@ -121,23 +134,29 @@ using pricelist.Model;
 
 namespace Example
 {
-    public class PriceListDeletePriceListItemsExample
+    public class DeletePriceListItemsExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
             var apiInstance = new PriceListApi(config);
             var body = new PricelistDeletePriceListItemsRequest(); // PricelistDeletePriceListItemsRequest | 
 
             try
             {
-                Object result = apiInstance.PriceListDeletePriceListItems(body);
+                // Get prices for items
+                Object result = apiInstance.DeletePriceListItems(body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PriceListApi.PriceListDeletePriceListItems: " + e.Message);
+                Debug.Print("Exception when calling PriceListApi.DeletePriceListItems: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -146,20 +165,21 @@ namespace Example
 }
 ```
 
-#### Using the PriceListDeletePriceListItemsWithHttpInfo variant
+#### Using the DeletePriceListItemsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    ApiResponse<Object> response = apiInstance.PriceListDeletePriceListItemsWithHttpInfo(body);
+    // Get prices for items
+    ApiResponse<Object> response = apiInstance.DeletePriceListItemsWithHttpInfo(body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling PriceListApi.PriceListDeletePriceListItemsWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling PriceListApi.DeletePriceListItemsWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -177,7 +197,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -188,16 +208,20 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
 | **0** | An unexpected error response. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="pricelistgetfullpriceitemsbypricelistid"></a>
-# **PriceListGetFullPriceItemsByPricelistId**
-> PricelistGetFullPriceItemsResponse PriceListGetFullPriceItemsByPricelistId (PricelistGetFullPriceItemsRequest body)
+<a id="getfullpriceitemsbypricelistid"></a>
+# **GetFullPriceItemsByPricelistId**
+> PricelistGetFullPriceItemsResponse GetFullPriceItemsByPricelistId (PricelistGetFullPriceItemsRequest body)
 
+List detailed items
 
+Fetches detailed information about items, including historical price data, for a specific price list.
 
 ### Example
 ```csharp
@@ -209,23 +233,29 @@ using pricelist.Model;
 
 namespace Example
 {
-    public class PriceListGetFullPriceItemsByPricelistIdExample
+    public class GetFullPriceItemsByPricelistIdExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
             var apiInstance = new PriceListApi(config);
             var body = new PricelistGetFullPriceItemsRequest(); // PricelistGetFullPriceItemsRequest | 
 
             try
             {
-                PricelistGetFullPriceItemsResponse result = apiInstance.PriceListGetFullPriceItemsByPricelistId(body);
+                // List detailed items
+                PricelistGetFullPriceItemsResponse result = apiInstance.GetFullPriceItemsByPricelistId(body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PriceListApi.PriceListGetFullPriceItemsByPricelistId: " + e.Message);
+                Debug.Print("Exception when calling PriceListApi.GetFullPriceItemsByPricelistId: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -234,20 +264,21 @@ namespace Example
 }
 ```
 
-#### Using the PriceListGetFullPriceItemsByPricelistIdWithHttpInfo variant
+#### Using the GetFullPriceItemsByPricelistIdWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    ApiResponse<PricelistGetFullPriceItemsResponse> response = apiInstance.PriceListGetFullPriceItemsByPricelistIdWithHttpInfo(body);
+    // List detailed items
+    ApiResponse<PricelistGetFullPriceItemsResponse> response = apiInstance.GetFullPriceItemsByPricelistIdWithHttpInfo(body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling PriceListApi.PriceListGetFullPriceItemsByPricelistIdWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling PriceListApi.GetFullPriceItemsByPricelistIdWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -265,7 +296,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -276,7 +307,603 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
+| **0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getpricelist"></a>
+# **GetPriceList**
+> PricelistGetPriceListResponse GetPriceList (PricelistGetPriceListRequest body)
+
+Get specific list
+
+Returns information about a particular price list identified by tenant ID and price list ID. The response includes details such as code, name, currency, and type.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using pricelist.Api;
+using pricelist.Client;
+using pricelist.Model;
+
+namespace Example
+{
+    public class GetPriceListExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new PriceListApi(config);
+            var body = new PricelistGetPriceListRequest(); // PricelistGetPriceListRequest | 
+
+            try
+            {
+                // Get specific list
+                PricelistGetPriceListResponse result = apiInstance.GetPriceList(body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PriceListApi.GetPriceList: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetPriceListWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get specific list
+    ApiResponse<PricelistGetPriceListResponse> response = apiInstance.GetPriceListWithHttpInfo(body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PriceListApi.GetPriceListWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **body** | [**PricelistGetPriceListRequest**](PricelistGetPriceListRequest.md) |  |  |
+
+### Return type
+
+[**PricelistGetPriceListResponse**](PricelistGetPriceListResponse.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
+| **0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getpricelistbycode"></a>
+# **GetPriceListByCode**
+> PricelistGetPriceListByCodeResponse GetPriceListByCode (PricelistGetPriceListByCodeRequest body)
+
+Get list by code
+
+Retrieves information about a specific price list using the unique code associated with it. The response includes details such as code, name, currency, and type.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using pricelist.Api;
+using pricelist.Client;
+using pricelist.Model;
+
+namespace Example
+{
+    public class GetPriceListByCodeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new PriceListApi(config);
+            var body = new PricelistGetPriceListByCodeRequest(); // PricelistGetPriceListByCodeRequest | 
+
+            try
+            {
+                // Get list by code
+                PricelistGetPriceListByCodeResponse result = apiInstance.GetPriceListByCode(body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PriceListApi.GetPriceListByCode: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetPriceListByCodeWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get list by code
+    ApiResponse<PricelistGetPriceListByCodeResponse> response = apiInstance.GetPriceListByCodeWithHttpInfo(body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PriceListApi.GetPriceListByCodeWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **body** | [**PricelistGetPriceListByCodeRequest**](PricelistGetPriceListByCodeRequest.md) |  |  |
+
+### Return type
+
+[**PricelistGetPriceListByCodeResponse**](PricelistGetPriceListByCodeResponse.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
+| **0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getpricelistitems"></a>
+# **GetPriceListItems**
+> PricelistGetPriceListItemsResponse GetPriceListItems (PricelistGetPriceListItemsRequest body)
+
+Get items in list
+
+Fetches a paginated list of items associated with a particular price list.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using pricelist.Api;
+using pricelist.Client;
+using pricelist.Model;
+
+namespace Example
+{
+    public class GetPriceListItemsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new PriceListApi(config);
+            var body = new PricelistGetPriceListItemsRequest(); // PricelistGetPriceListItemsRequest | 
+
+            try
+            {
+                // Get items in list
+                PricelistGetPriceListItemsResponse result = apiInstance.GetPriceListItems(body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PriceListApi.GetPriceListItems: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetPriceListItemsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get items in list
+    ApiResponse<PricelistGetPriceListItemsResponse> response = apiInstance.GetPriceListItemsWithHttpInfo(body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PriceListApi.GetPriceListItemsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **body** | [**PricelistGetPriceListItemsRequest**](PricelistGetPriceListItemsRequest.md) |  |  |
+
+### Return type
+
+[**PricelistGetPriceListItemsResponse**](PricelistGetPriceListItemsResponse.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
+| **0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getpricesitems"></a>
+# **GetPricesItems**
+> PricelistGetPricesResponse GetPricesItems (PricelistGetPricesRequest body)
+
+Get detailed items
+
+Retrieves the current prices of specified items considering the provided context, such as currency and market.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using pricelist.Api;
+using pricelist.Client;
+using pricelist.Model;
+
+namespace Example
+{
+    public class GetPricesItemsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new PriceListApi(config);
+            var body = new PricelistGetPricesRequest(); // PricelistGetPricesRequest | 
+
+            try
+            {
+                // Get detailed items
+                PricelistGetPricesResponse result = apiInstance.GetPricesItems(body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PriceListApi.GetPricesItems: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetPricesItemsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get detailed items
+    ApiResponse<PricelistGetPricesResponse> response = apiInstance.GetPricesItemsWithHttpInfo(body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PriceListApi.GetPricesItemsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **body** | [**PricelistGetPricesRequest**](PricelistGetPricesRequest.md) |  |  |
+
+### Return type
+
+[**PricelistGetPricesResponse**](PricelistGetPricesResponse.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
+| **0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="listfullpriceitemsbypricelistid"></a>
+# **ListFullPriceItemsByPricelistId**
+> PricelistListFullPriceItemsResponse ListFullPriceItemsByPricelistId (PricelistListFullPriceItemsRequest body)
+
+List detailed price items for a specific price list
+
+Retrieves a paginated list of detailed price items, including historical data, for a specific price list.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using pricelist.Api;
+using pricelist.Client;
+using pricelist.Model;
+
+namespace Example
+{
+    public class ListFullPriceItemsByPricelistIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new PriceListApi(config);
+            var body = new PricelistListFullPriceItemsRequest(); // PricelistListFullPriceItemsRequest | 
+
+            try
+            {
+                // List detailed price items for a specific price list
+                PricelistListFullPriceItemsResponse result = apiInstance.ListFullPriceItemsByPricelistId(body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PriceListApi.ListFullPriceItemsByPricelistId: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListFullPriceItemsByPricelistIdWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List detailed price items for a specific price list
+    ApiResponse<PricelistListFullPriceItemsResponse> response = apiInstance.ListFullPriceItemsByPricelistIdWithHttpInfo(body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PriceListApi.ListFullPriceItemsByPricelistIdWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **body** | [**PricelistListFullPriceItemsRequest**](PricelistListFullPriceItemsRequest.md) |  |  |
+
+### Return type
+
+[**PricelistListFullPriceItemsResponse**](PricelistListFullPriceItemsResponse.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
+| **0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="listpricelists"></a>
+# **ListPriceLists**
+> PricelistListPriceListsResponse ListPriceLists (PricelistListPriceListsRequest body)
+
+List all price lists
+
+Retrieves a list of price lists based on optional filters such as name, code, and other attributes. The response includes details such as code, name, currency, and type.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using pricelist.Api;
+using pricelist.Client;
+using pricelist.Model;
+
+namespace Example
+{
+    public class ListPriceListsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new PriceListApi(config);
+            var body = new PricelistListPriceListsRequest(); // PricelistListPriceListsRequest | 
+
+            try
+            {
+                // List all price lists
+                PricelistListPriceListsResponse result = apiInstance.ListPriceLists(body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PriceListApi.ListPriceLists: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListPriceListsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List all price lists
+    ApiResponse<PricelistListPriceListsResponse> response = apiInstance.ListPriceListsWithHttpInfo(body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling PriceListApi.ListPriceListsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **body** | [**PricelistListPriceListsRequest**](PricelistListPriceListsRequest.md) |  |  |
+
+### Return type
+
+[**PricelistListPriceListsResponse**](PricelistListPriceListsResponse.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
 | **0** | An unexpected error response. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -302,7 +929,12 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
             var apiInstance = new PriceListApi(config);
             var body = new PricelistGetPriceItemsByPriceListItemIdsRequest(); // PricelistGetPriceItemsByPriceListItemIdsRequest | 
 
@@ -353,7 +985,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -369,99 +1001,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="pricelistgetpricelist"></a>
-# **PriceListGetPriceList**
-> PricelistGetPriceListResponse PriceListGetPriceList (PricelistGetPriceListRequest body)
+<a id="setpricelistitems"></a>
+# **SetPriceListItems**
+> PricelistSetPriceListItemsResponse SetPriceListItems (PricelistSetPriceListItemsRequest body)
 
+Set items in list
 
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using pricelist.Api;
-using pricelist.Client;
-using pricelist.Model;
-
-namespace Example
-{
-    public class PriceListGetPriceListExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            var apiInstance = new PriceListApi(config);
-            var body = new PricelistGetPriceListRequest(); // PricelistGetPriceListRequest | 
-
-            try
-            {
-                PricelistGetPriceListResponse result = apiInstance.PriceListGetPriceList(body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling PriceListApi.PriceListGetPriceList: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PriceListGetPriceListWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    ApiResponse<PricelistGetPriceListResponse> response = apiInstance.PriceListGetPriceListWithHttpInfo(body);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling PriceListApi.PriceListGetPriceListWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **body** | [**PricelistGetPriceListRequest**](PricelistGetPriceListRequest.md) |  |  |
-
-### Return type
-
-[**PricelistGetPriceListResponse**](PricelistGetPriceListResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
-| **0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="pricelistgetpricelistbycode"></a>
-# **PriceListGetPriceListByCode**
-> PricelistGetPriceListByCodeResponse PriceListGetPriceListByCode (PricelistGetPriceListByCodeRequest body)
-
-
+Updates or creates items for a given price list, allowing bulk modifications.
 
 ### Example
 ```csharp
@@ -473,463 +1019,29 @@ using pricelist.Model;
 
 namespace Example
 {
-    public class PriceListGetPriceListByCodeExample
+    public class SetPriceListItemsExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            var apiInstance = new PriceListApi(config);
-            var body = new PricelistGetPriceListByCodeRequest(); // PricelistGetPriceListByCodeRequest | 
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            try
-            {
-                PricelistGetPriceListByCodeResponse result = apiInstance.PriceListGetPriceListByCode(body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling PriceListApi.PriceListGetPriceListByCode: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PriceListGetPriceListByCodeWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    ApiResponse<PricelistGetPriceListByCodeResponse> response = apiInstance.PriceListGetPriceListByCodeWithHttpInfo(body);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling PriceListApi.PriceListGetPriceListByCodeWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **body** | [**PricelistGetPriceListByCodeRequest**](PricelistGetPriceListByCodeRequest.md) |  |  |
-
-### Return type
-
-[**PricelistGetPriceListByCodeResponse**](PricelistGetPriceListByCodeResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
-| **0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="pricelistgetpricelistitems"></a>
-# **PriceListGetPriceListItems**
-> PricelistGetPriceListItemsResponse PriceListGetPriceListItems (PricelistGetPriceListItemsRequest body)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using pricelist.Api;
-using pricelist.Client;
-using pricelist.Model;
-
-namespace Example
-{
-    public class PriceListGetPriceListItemsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            var apiInstance = new PriceListApi(config);
-            var body = new PricelistGetPriceListItemsRequest(); // PricelistGetPriceListItemsRequest | 
-
-            try
-            {
-                PricelistGetPriceListItemsResponse result = apiInstance.PriceListGetPriceListItems(body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling PriceListApi.PriceListGetPriceListItems: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PriceListGetPriceListItemsWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    ApiResponse<PricelistGetPriceListItemsResponse> response = apiInstance.PriceListGetPriceListItemsWithHttpInfo(body);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling PriceListApi.PriceListGetPriceListItemsWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **body** | [**PricelistGetPriceListItemsRequest**](PricelistGetPriceListItemsRequest.md) |  |  |
-
-### Return type
-
-[**PricelistGetPriceListItemsResponse**](PricelistGetPriceListItemsResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
-| **0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="pricelistgetpricesitems"></a>
-# **PriceListGetPricesItems**
-> PricelistGetPricesResponse PriceListGetPricesItems (PricelistGetPricesRequest body)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using pricelist.Api;
-using pricelist.Client;
-using pricelist.Model;
-
-namespace Example
-{
-    public class PriceListGetPricesItemsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            var apiInstance = new PriceListApi(config);
-            var body = new PricelistGetPricesRequest(); // PricelistGetPricesRequest | 
-
-            try
-            {
-                PricelistGetPricesResponse result = apiInstance.PriceListGetPricesItems(body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling PriceListApi.PriceListGetPricesItems: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PriceListGetPricesItemsWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    ApiResponse<PricelistGetPricesResponse> response = apiInstance.PriceListGetPricesItemsWithHttpInfo(body);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling PriceListApi.PriceListGetPricesItemsWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **body** | [**PricelistGetPricesRequest**](PricelistGetPricesRequest.md) |  |  |
-
-### Return type
-
-[**PricelistGetPricesResponse**](PricelistGetPricesResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
-| **0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="pricelistlistfullpriceitemsbypricelistid"></a>
-# **PriceListListFullPriceItemsByPricelistId**
-> PricelistListFullPriceItemsResponse PriceListListFullPriceItemsByPricelistId (PricelistListFullPriceItemsRequest body)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using pricelist.Api;
-using pricelist.Client;
-using pricelist.Model;
-
-namespace Example
-{
-    public class PriceListListFullPriceItemsByPricelistIdExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            var apiInstance = new PriceListApi(config);
-            var body = new PricelistListFullPriceItemsRequest(); // PricelistListFullPriceItemsRequest | 
-
-            try
-            {
-                PricelistListFullPriceItemsResponse result = apiInstance.PriceListListFullPriceItemsByPricelistId(body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling PriceListApi.PriceListListFullPriceItemsByPricelistId: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PriceListListFullPriceItemsByPricelistIdWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    ApiResponse<PricelistListFullPriceItemsResponse> response = apiInstance.PriceListListFullPriceItemsByPricelistIdWithHttpInfo(body);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling PriceListApi.PriceListListFullPriceItemsByPricelistIdWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **body** | [**PricelistListFullPriceItemsRequest**](PricelistListFullPriceItemsRequest.md) |  |  |
-
-### Return type
-
-[**PricelistListFullPriceItemsResponse**](PricelistListFullPriceItemsResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
-| **0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="pricelistlistpricelists"></a>
-# **PriceListListPriceLists**
-> PricelistListPriceListsResponse PriceListListPriceLists (PricelistListPriceListsRequest body)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using pricelist.Api;
-using pricelist.Client;
-using pricelist.Model;
-
-namespace Example
-{
-    public class PriceListListPriceListsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            var apiInstance = new PriceListApi(config);
-            var body = new PricelistListPriceListsRequest(); // PricelistListPriceListsRequest | 
-
-            try
-            {
-                PricelistListPriceListsResponse result = apiInstance.PriceListListPriceLists(body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling PriceListApi.PriceListListPriceLists: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PriceListListPriceListsWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    ApiResponse<PricelistListPriceListsResponse> response = apiInstance.PriceListListPriceListsWithHttpInfo(body);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling PriceListApi.PriceListListPriceListsWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **body** | [**PricelistListPriceListsRequest**](PricelistListPriceListsRequest.md) |  |  |
-
-### Return type
-
-[**PricelistListPriceListsResponse**](PricelistListPriceListsResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
-| **0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="pricelistsetpricelistitems"></a>
-# **PriceListSetPriceListItems**
-> PricelistSetPriceListItemsResponse PriceListSetPriceListItems (PricelistSetPriceListItemsRequest body)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using pricelist.Api;
-using pricelist.Client;
-using pricelist.Model;
-
-namespace Example
-{
-    public class PriceListSetPriceListItemsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
             var apiInstance = new PriceListApi(config);
             var body = new PricelistSetPriceListItemsRequest(); // PricelistSetPriceListItemsRequest | 
 
             try
             {
-                PricelistSetPriceListItemsResponse result = apiInstance.PriceListSetPriceListItems(body);
+                // Set items in list
+                PricelistSetPriceListItemsResponse result = apiInstance.SetPriceListItems(body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PriceListApi.PriceListSetPriceListItems: " + e.Message);
+                Debug.Print("Exception when calling PriceListApi.SetPriceListItems: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -938,20 +1050,21 @@ namespace Example
 }
 ```
 
-#### Using the PriceListSetPriceListItemsWithHttpInfo variant
+#### Using the SetPriceListItemsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    ApiResponse<PricelistSetPriceListItemsResponse> response = apiInstance.PriceListSetPriceListItemsWithHttpInfo(body);
+    // Set items in list
+    ApiResponse<PricelistSetPriceListItemsResponse> response = apiInstance.SetPriceListItemsWithHttpInfo(body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling PriceListApi.PriceListSetPriceListItemsWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling PriceListApi.SetPriceListItemsWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -969,7 +1082,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -980,16 +1093,20 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
 | **0** | An unexpected error response. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="pricelistupdatepricelist"></a>
-# **PriceListUpdatePriceList**
-> Object PriceListUpdatePriceList (PricelistUpdatePriceListRequest body)
+<a id="updatepricelist"></a>
+# **UpdatePriceList**
+> Object UpdatePriceList (PricelistUpdatePriceListRequest body)
 
+Update list
 
+Modifies the attributes of an existing price list based on the provided payload and field mask. The field mask is used to specify which attributes of the price list are to be updated. The field mask is a comma-separated list of fully qualified names of fields. Example: `code,name,currency,type`
 
 ### Example
 ```csharp
@@ -1001,23 +1118,29 @@ using pricelist.Model;
 
 namespace Example
 {
-    public class PriceListUpdatePriceListExample
+    public class UpdatePriceListExample
     {
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
+            config.BasePath = "https://pricelist.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
             var apiInstance = new PriceListApi(config);
             var body = new PricelistUpdatePriceListRequest(); // PricelistUpdatePriceListRequest | 
 
             try
             {
-                Object result = apiInstance.PriceListUpdatePriceList(body);
+                // Update list
+                Object result = apiInstance.UpdatePriceList(body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling PriceListApi.PriceListUpdatePriceList: " + e.Message);
+                Debug.Print("Exception when calling PriceListApi.UpdatePriceList: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1026,20 +1149,21 @@ namespace Example
 }
 ```
 
-#### Using the PriceListUpdatePriceListWithHttpInfo variant
+#### Using the UpdatePriceListWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    ApiResponse<Object> response = apiInstance.PriceListUpdatePriceListWithHttpInfo(body);
+    // Update list
+    ApiResponse<Object> response = apiInstance.UpdatePriceListWithHttpInfo(body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling PriceListApi.PriceListUpdatePriceListWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling PriceListApi.UpdatePriceListWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1057,7 +1181,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1068,7 +1192,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A successful response. |  -  |
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
 | **0** | An unexpected error response. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
