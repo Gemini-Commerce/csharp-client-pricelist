@@ -42,7 +42,10 @@ namespace pricelist.Model
         /// Initializes a new instance of the <see cref="PricelistPriceContext" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected PricelistPriceContext() { }
+        protected PricelistPriceContext()
+        {
+            this.AdditionalProperties = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="PricelistPriceContext" /> class.
         /// </summary>
@@ -58,6 +61,7 @@ namespace pricelist.Model
             this.Segments = segments;
             this.Market = market;
             this.Channel = channel;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -85,6 +89,12 @@ namespace pricelist.Model
         public string Channel { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -97,6 +107,7 @@ namespace pricelist.Model
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("  Market: ").Append(Market).Append("\n");
             sb.Append("  Channel: ").Append(Channel).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,7 +126,7 @@ namespace pricelist.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

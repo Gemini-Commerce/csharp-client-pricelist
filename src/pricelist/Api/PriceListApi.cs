@@ -321,7 +321,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistCreatePriceListResponse</returns>
-        System.Threading.Tasks.Task<PricelistCreatePriceListResponse> CreatePriceListAsync(PricelistCreatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PricelistCreatePriceListResponse> CreatePriceListAsync(PricelistCreatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create new list
@@ -334,7 +334,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistCreatePriceListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PricelistCreatePriceListResponse>> CreatePriceListWithHttpInfoAsync(PricelistCreatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PricelistCreatePriceListResponse>> CreatePriceListWithHttpInfoAsync(PricelistCreatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get prices for items
         /// </summary>
@@ -346,7 +346,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DeletePriceListItemsAsync(PricelistDeletePriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> DeletePriceListItemsAsync(PricelistDeletePriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get prices for items
@@ -359,7 +359,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePriceListItemsWithHttpInfoAsync(PricelistDeletePriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePriceListItemsWithHttpInfoAsync(PricelistDeletePriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List detailed items
         /// </summary>
@@ -371,7 +371,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetFullPriceItemsResponse</returns>
-        System.Threading.Tasks.Task<PricelistGetFullPriceItemsResponse> GetFullPriceItemsByPricelistIdAsync(PricelistGetFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PricelistGetFullPriceItemsResponse> GetFullPriceItemsByPricelistIdAsync(PricelistGetFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List detailed items
@@ -384,7 +384,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetFullPriceItemsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PricelistGetFullPriceItemsResponse>> GetFullPriceItemsByPricelistIdWithHttpInfoAsync(PricelistGetFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PricelistGetFullPriceItemsResponse>> GetFullPriceItemsByPricelistIdWithHttpInfoAsync(PricelistGetFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get specific list
         /// </summary>
@@ -396,7 +396,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetPriceListResponse</returns>
-        System.Threading.Tasks.Task<PricelistGetPriceListResponse> GetPriceListAsync(PricelistGetPriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PricelistGetPriceListResponse> GetPriceListAsync(PricelistGetPriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get specific list
@@ -409,7 +409,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetPriceListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PricelistGetPriceListResponse>> GetPriceListWithHttpInfoAsync(PricelistGetPriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PricelistGetPriceListResponse>> GetPriceListWithHttpInfoAsync(PricelistGetPriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get list by code
         /// </summary>
@@ -421,7 +421,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetPriceListByCodeResponse</returns>
-        System.Threading.Tasks.Task<PricelistGetPriceListByCodeResponse> GetPriceListByCodeAsync(PricelistGetPriceListByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PricelistGetPriceListByCodeResponse> GetPriceListByCodeAsync(PricelistGetPriceListByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get list by code
@@ -434,7 +434,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetPriceListByCodeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PricelistGetPriceListByCodeResponse>> GetPriceListByCodeWithHttpInfoAsync(PricelistGetPriceListByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PricelistGetPriceListByCodeResponse>> GetPriceListByCodeWithHttpInfoAsync(PricelistGetPriceListByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get items in list
         /// </summary>
@@ -446,7 +446,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetPriceListItemsResponse</returns>
-        System.Threading.Tasks.Task<PricelistGetPriceListItemsResponse> GetPriceListItemsAsync(PricelistGetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PricelistGetPriceListItemsResponse> GetPriceListItemsAsync(PricelistGetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get items in list
@@ -459,7 +459,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetPriceListItemsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PricelistGetPriceListItemsResponse>> GetPriceListItemsWithHttpInfoAsync(PricelistGetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PricelistGetPriceListItemsResponse>> GetPriceListItemsWithHttpInfoAsync(PricelistGetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get detailed items
         /// </summary>
@@ -471,7 +471,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetPricesResponse</returns>
-        System.Threading.Tasks.Task<PricelistGetPricesResponse> GetPricesItemsAsync(PricelistGetPricesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PricelistGetPricesResponse> GetPricesItemsAsync(PricelistGetPricesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get detailed items
@@ -484,7 +484,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetPricesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PricelistGetPricesResponse>> GetPricesItemsWithHttpInfoAsync(PricelistGetPricesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PricelistGetPricesResponse>> GetPricesItemsWithHttpInfoAsync(PricelistGetPricesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List detailed price items for a specific price list
         /// </summary>
@@ -496,7 +496,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistListFullPriceItemsResponse</returns>
-        System.Threading.Tasks.Task<PricelistListFullPriceItemsResponse> ListFullPriceItemsByPricelistIdAsync(PricelistListFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PricelistListFullPriceItemsResponse> ListFullPriceItemsByPricelistIdAsync(PricelistListFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List detailed price items for a specific price list
@@ -509,7 +509,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistListFullPriceItemsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PricelistListFullPriceItemsResponse>> ListFullPriceItemsByPricelistIdWithHttpInfoAsync(PricelistListFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PricelistListFullPriceItemsResponse>> ListFullPriceItemsByPricelistIdWithHttpInfoAsync(PricelistListFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List all price lists
         /// </summary>
@@ -521,7 +521,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistListPriceListsResponse</returns>
-        System.Threading.Tasks.Task<PricelistListPriceListsResponse> ListPriceListsAsync(PricelistListPriceListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PricelistListPriceListsResponse> ListPriceListsAsync(PricelistListPriceListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List all price lists
@@ -534,7 +534,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistListPriceListsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PricelistListPriceListsResponse>> ListPriceListsWithHttpInfoAsync(PricelistListPriceListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PricelistListPriceListsResponse>> ListPriceListsWithHttpInfoAsync(PricelistListPriceListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -546,7 +546,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetPriceItemsByPriceListItemIdsResponse</returns>
-        System.Threading.Tasks.Task<PricelistGetPriceItemsByPriceListItemIdsResponse> PriceListGetPriceItemsByPriceListItemIdsAsync(PricelistGetPriceItemsByPriceListItemIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PricelistGetPriceItemsByPriceListItemIdsResponse> PriceListGetPriceItemsByPriceListItemIdsAsync(PricelistGetPriceItemsByPriceListItemIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -559,7 +559,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetPriceItemsByPriceListItemIdsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PricelistGetPriceItemsByPriceListItemIdsResponse>> PriceListGetPriceItemsByPriceListItemIdsWithHttpInfoAsync(PricelistGetPriceItemsByPriceListItemIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PricelistGetPriceItemsByPriceListItemIdsResponse>> PriceListGetPriceItemsByPriceListItemIdsWithHttpInfoAsync(PricelistGetPriceItemsByPriceListItemIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Set items in list
         /// </summary>
@@ -571,7 +571,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistSetPriceListItemsResponse</returns>
-        System.Threading.Tasks.Task<PricelistSetPriceListItemsResponse> SetPriceListItemsAsync(PricelistSetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PricelistSetPriceListItemsResponse> SetPriceListItemsAsync(PricelistSetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Set items in list
@@ -584,7 +584,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistSetPriceListItemsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PricelistSetPriceListItemsResponse>> SetPriceListItemsWithHttpInfoAsync(PricelistSetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PricelistSetPriceListItemsResponse>> SetPriceListItemsWithHttpInfoAsync(PricelistSetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update list
         /// </summary>
@@ -596,7 +596,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> UpdatePriceListAsync(PricelistUpdatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> UpdatePriceListAsync(PricelistUpdatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update list
@@ -609,7 +609,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePriceListWithHttpInfoAsync(PricelistUpdatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePriceListWithHttpInfoAsync(PricelistUpdatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -814,7 +814,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistCreatePriceListResponse</returns>
-        public async System.Threading.Tasks.Task<PricelistCreatePriceListResponse> CreatePriceListAsync(PricelistCreatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PricelistCreatePriceListResponse> CreatePriceListAsync(PricelistCreatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<PricelistCreatePriceListResponse> localVarResponse = await CreatePriceListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -828,7 +828,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistCreatePriceListResponse)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistCreatePriceListResponse>> CreatePriceListWithHttpInfoAsync(PricelistCreatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistCreatePriceListResponse>> CreatePriceListWithHttpInfoAsync(PricelistCreatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -970,7 +970,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DeletePriceListItemsAsync(PricelistDeletePriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> DeletePriceListItemsAsync(PricelistDeletePriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<Object> localVarResponse = await DeletePriceListItemsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -984,7 +984,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<Object>> DeletePriceListItemsWithHttpInfoAsync(PricelistDeletePriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<Object>> DeletePriceListItemsWithHttpInfoAsync(PricelistDeletePriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1126,7 +1126,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetFullPriceItemsResponse</returns>
-        public async System.Threading.Tasks.Task<PricelistGetFullPriceItemsResponse> GetFullPriceItemsByPricelistIdAsync(PricelistGetFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PricelistGetFullPriceItemsResponse> GetFullPriceItemsByPricelistIdAsync(PricelistGetFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<PricelistGetFullPriceItemsResponse> localVarResponse = await GetFullPriceItemsByPricelistIdWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1140,7 +1140,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetFullPriceItemsResponse)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetFullPriceItemsResponse>> GetFullPriceItemsByPricelistIdWithHttpInfoAsync(PricelistGetFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetFullPriceItemsResponse>> GetFullPriceItemsByPricelistIdWithHttpInfoAsync(PricelistGetFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1282,7 +1282,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetPriceListResponse</returns>
-        public async System.Threading.Tasks.Task<PricelistGetPriceListResponse> GetPriceListAsync(PricelistGetPriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PricelistGetPriceListResponse> GetPriceListAsync(PricelistGetPriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<PricelistGetPriceListResponse> localVarResponse = await GetPriceListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1296,7 +1296,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetPriceListResponse)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetPriceListResponse>> GetPriceListWithHttpInfoAsync(PricelistGetPriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetPriceListResponse>> GetPriceListWithHttpInfoAsync(PricelistGetPriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1438,7 +1438,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetPriceListByCodeResponse</returns>
-        public async System.Threading.Tasks.Task<PricelistGetPriceListByCodeResponse> GetPriceListByCodeAsync(PricelistGetPriceListByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PricelistGetPriceListByCodeResponse> GetPriceListByCodeAsync(PricelistGetPriceListByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<PricelistGetPriceListByCodeResponse> localVarResponse = await GetPriceListByCodeWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1452,7 +1452,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetPriceListByCodeResponse)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetPriceListByCodeResponse>> GetPriceListByCodeWithHttpInfoAsync(PricelistGetPriceListByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetPriceListByCodeResponse>> GetPriceListByCodeWithHttpInfoAsync(PricelistGetPriceListByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1594,7 +1594,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetPriceListItemsResponse</returns>
-        public async System.Threading.Tasks.Task<PricelistGetPriceListItemsResponse> GetPriceListItemsAsync(PricelistGetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PricelistGetPriceListItemsResponse> GetPriceListItemsAsync(PricelistGetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<PricelistGetPriceListItemsResponse> localVarResponse = await GetPriceListItemsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1608,7 +1608,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetPriceListItemsResponse)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetPriceListItemsResponse>> GetPriceListItemsWithHttpInfoAsync(PricelistGetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetPriceListItemsResponse>> GetPriceListItemsWithHttpInfoAsync(PricelistGetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1750,7 +1750,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetPricesResponse</returns>
-        public async System.Threading.Tasks.Task<PricelistGetPricesResponse> GetPricesItemsAsync(PricelistGetPricesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PricelistGetPricesResponse> GetPricesItemsAsync(PricelistGetPricesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<PricelistGetPricesResponse> localVarResponse = await GetPricesItemsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1764,7 +1764,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetPricesResponse)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetPricesResponse>> GetPricesItemsWithHttpInfoAsync(PricelistGetPricesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetPricesResponse>> GetPricesItemsWithHttpInfoAsync(PricelistGetPricesRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1906,7 +1906,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistListFullPriceItemsResponse</returns>
-        public async System.Threading.Tasks.Task<PricelistListFullPriceItemsResponse> ListFullPriceItemsByPricelistIdAsync(PricelistListFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PricelistListFullPriceItemsResponse> ListFullPriceItemsByPricelistIdAsync(PricelistListFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<PricelistListFullPriceItemsResponse> localVarResponse = await ListFullPriceItemsByPricelistIdWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1920,7 +1920,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistListFullPriceItemsResponse)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistListFullPriceItemsResponse>> ListFullPriceItemsByPricelistIdWithHttpInfoAsync(PricelistListFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistListFullPriceItemsResponse>> ListFullPriceItemsByPricelistIdWithHttpInfoAsync(PricelistListFullPriceItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2062,7 +2062,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistListPriceListsResponse</returns>
-        public async System.Threading.Tasks.Task<PricelistListPriceListsResponse> ListPriceListsAsync(PricelistListPriceListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PricelistListPriceListsResponse> ListPriceListsAsync(PricelistListPriceListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<PricelistListPriceListsResponse> localVarResponse = await ListPriceListsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2076,7 +2076,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistListPriceListsResponse)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistListPriceListsResponse>> ListPriceListsWithHttpInfoAsync(PricelistListPriceListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistListPriceListsResponse>> ListPriceListsWithHttpInfoAsync(PricelistListPriceListsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2218,7 +2218,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistGetPriceItemsByPriceListItemIdsResponse</returns>
-        public async System.Threading.Tasks.Task<PricelistGetPriceItemsByPriceListItemIdsResponse> PriceListGetPriceItemsByPriceListItemIdsAsync(PricelistGetPriceItemsByPriceListItemIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PricelistGetPriceItemsByPriceListItemIdsResponse> PriceListGetPriceItemsByPriceListItemIdsAsync(PricelistGetPriceItemsByPriceListItemIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<PricelistGetPriceItemsByPriceListItemIdsResponse> localVarResponse = await PriceListGetPriceItemsByPriceListItemIdsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2232,7 +2232,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistGetPriceItemsByPriceListItemIdsResponse)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetPriceItemsByPriceListItemIdsResponse>> PriceListGetPriceItemsByPriceListItemIdsWithHttpInfoAsync(PricelistGetPriceItemsByPriceListItemIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistGetPriceItemsByPriceListItemIdsResponse>> PriceListGetPriceItemsByPriceListItemIdsWithHttpInfoAsync(PricelistGetPriceItemsByPriceListItemIdsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2374,7 +2374,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PricelistSetPriceListItemsResponse</returns>
-        public async System.Threading.Tasks.Task<PricelistSetPriceListItemsResponse> SetPriceListItemsAsync(PricelistSetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PricelistSetPriceListItemsResponse> SetPriceListItemsAsync(PricelistSetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<PricelistSetPriceListItemsResponse> localVarResponse = await SetPriceListItemsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2388,7 +2388,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PricelistSetPriceListItemsResponse)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistSetPriceListItemsResponse>> SetPriceListItemsWithHttpInfoAsync(PricelistSetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<PricelistSetPriceListItemsResponse>> SetPriceListItemsWithHttpInfoAsync(PricelistSetPriceListItemsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2530,7 +2530,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> UpdatePriceListAsync(PricelistUpdatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> UpdatePriceListAsync(PricelistUpdatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             pricelist.Client.ApiResponse<Object> localVarResponse = await UpdatePriceListWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2544,7 +2544,7 @@ namespace pricelist.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<Object>> UpdatePriceListWithHttpInfoAsync(PricelistUpdatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<pricelist.Client.ApiResponse<Object>> UpdatePriceListWithHttpInfoAsync(PricelistUpdatePriceListRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)

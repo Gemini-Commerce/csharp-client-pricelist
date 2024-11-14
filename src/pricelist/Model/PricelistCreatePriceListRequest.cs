@@ -77,6 +77,7 @@ namespace pricelist.Model
             this.Channels = channels;
             this.Type = type;
             this.IsSystem = isSystem;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -152,6 +153,12 @@ namespace pricelist.Model
         public bool IsSystem { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -173,6 +180,7 @@ namespace pricelist.Model
             sb.Append("  Channels: ").Append(Channels).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  IsSystem: ").Append(IsSystem).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -191,7 +199,7 @@ namespace pricelist.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

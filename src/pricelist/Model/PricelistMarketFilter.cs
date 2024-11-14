@@ -47,6 +47,7 @@ namespace pricelist.Model
         {
             this.Markets = markets;
             this.Condition = condition;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -54,6 +55,12 @@ namespace pricelist.Model
         /// </summary>
         [DataMember(Name = "markets", EmitDefaultValue = false)]
         public List<string> Markets { get; set; }
+
+        /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -65,6 +72,7 @@ namespace pricelist.Model
             sb.Append("class PricelistMarketFilter {\n");
             sb.Append("  Markets: ").Append(Markets).Append("\n");
             sb.Append("  Condition: ").Append(Condition).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,7 +91,7 @@ namespace pricelist.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

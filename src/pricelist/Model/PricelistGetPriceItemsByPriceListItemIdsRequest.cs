@@ -41,6 +41,7 @@ namespace pricelist.Model
         {
             this.TenantId = tenantId;
             this.PriceListItemId = priceListItemId;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -56,6 +57,12 @@ namespace pricelist.Model
         public List<string> PriceListItemId { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +72,7 @@ namespace pricelist.Model
             sb.Append("class PricelistGetPriceItemsByPriceListItemIdsRequest {\n");
             sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("  PriceListItemId: ").Append(PriceListItemId).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,7 +91,7 @@ namespace pricelist.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }
